@@ -4,7 +4,7 @@
 
 
 // Demonstrate how to serve model-based entities
-// In this case it is a simple service factory.
+// In this case it is a simple service factory which spawns User entities
 // This could be used as a traditional model-service
 
 angular.module('demo').service('UserService', function($http, $q, User) {
@@ -34,4 +34,11 @@ angular.module('demo').service('UserService', function($http, $q, User) {
             }
         );
     };
+    // second part of 2-way binding (XHR post)
+    this.addUser = function(user) {
+        return $http.post('/mockApi/user/add',user).then(
+            function(response) {console.log(response);return true},
+            function(response) {console.log(response);return false}
+        );
+    }
 });

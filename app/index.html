@@ -1,28 +1,37 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="demo">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>AngularJS Demo</title>
   <link rel="stylesheet" href="css/app.css"/>
+  <meta name="fragment" content="!">
 </head>
 <body>
   <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view1"> view1</a></li>
     <li><a href="#/view2">view2</a></li>
+    <li><a href="#/view3">view3</a></li>
+    <li><a href="#/view4">view4</a></li>
   </ul>
 
   <div data-ng-view></div>
 
-  <div>Angular seed app: v<span data-app-version></span></div>
+  <div>Angular demo app</div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+  <script src="js/demo/app.js"></script>
+  <script src="js/demo/values.js"></script>
+  <script src="js/demo/providers/usersProvider.js"></script>
+  <script src="js/demo/controllers/myController1.js"></script>
+  <script src="js/demo/controllers/myController2.js"></script>
+  <script src="js/demo/controllers/myController3.js"></script>
+  <script src="js/demo/controllers/myController4.js"></script>
+  <script src="js/demo/filters/interpolateFilter.js"></script>
+  <script src="js/demo/directives/webDirective.js"></script>
+  <script src="js/demo/models/entities/User.js"></script>
+  <script src="js/demo/models/services/UserService.js"></script>
 </body>
 </html>

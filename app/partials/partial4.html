@@ -1,0 +1,13 @@
+<p>This is the partial for view 4.</p>
+    <input placeholder="type to filter" type="text" data-ng-model="nameText" />
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+        </tr>
+        <tr data-ng-repeat="user in users | filter:nameText | orderBy:'name'">
+            <td>{{ user.name }}</td>
+            <td>{{ user.country }}</td>
+        </tr>
+    </table>
+</p>
